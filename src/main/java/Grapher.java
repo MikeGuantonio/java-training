@@ -10,4 +10,8 @@ public class Grapher {
     public Grapher() {
 	this.children = new ArrayList<Grapher>(); 
     }
+
+    public boolean hasChildren() {
+	return this.children.size() != 0;
+    }
 }

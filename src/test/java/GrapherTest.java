@@ -1,6 +1,7 @@
 package com.guantonio.javatrain;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals; 
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
@@ -26,5 +27,13 @@ public class GrapherTest {
 	Grapher graph = new Grapher();
 
 	assertNotNull(graph); 
+    }
+
+    @Test
+    @DisplayName("Should have no children on standard creation")
+    public void grapherChildren() {
+	Grapher graph = new Grapher();
+
+	assertEquals(graph.hasChildren(), false);
     }
 }
