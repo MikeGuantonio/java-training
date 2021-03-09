@@ -1,7 +1,9 @@
 package com.guantonio.javatrain;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertEquals; 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull; 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
@@ -43,5 +45,19 @@ public class GrapherTest {
 	Grapher graph = new Grapher();
 
 	assertEquals(graph.getName(), "");
+    }
+
+    @Test
+    @DisplayName("Should create a node on the graph with a name")
+    public void grapherCreateWithName(){
+	Grapher graph = new Grapher("Nick");
+
+	assertEquals(graph.getName(), "Nick");
+    }
+
+    @Test
+    @DisplayName("Should not create a node with a null name")
+    public void grapherNullName(){
+	// code
     }
 }
