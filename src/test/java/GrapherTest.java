@@ -36,4 +36,12 @@ public class GrapherTest {
 
 	assertEquals(graph.hasChildren(), false);
     }
+
+    @Test
+    @DisplayName("Should return the value of the node")
+    public void grapherValue() {
+	Grapher graph = new Grapher();
+
+	assertEquals(graph.getName(), "");
+    }
 }
