@@ -98,4 +98,24 @@ public class GrapherTest {
 
 	assertFalse(graph.hasChildren());
     }
+
+    @Test
+    @DisplayName("Should reove nothing if child cannot be found")
+    public void grapherRemoveNonNode(){
+	Grapher graph = new Grapher("Nick");
+
+	graph.remove("Sam");
+
+	assertFalse(graph.hasChildren());
+    }
+
+    @Test
+    @DisplayName("Should not remove a child if no name is given")
+    public void grapherRemoveNonName(){
+	Grapher graph = new Grapher("Nick");
+
+	graph.remove("");
+
+	assertFalse(graph.hasChildren());
+    }
 }
