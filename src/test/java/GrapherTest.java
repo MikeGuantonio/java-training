@@ -117,5 +117,5 @@ public class GrapherTest {
 	graph.remove("");
 
 	assertFalse(graph.hasChildren());
-    }
+    } 
 }
