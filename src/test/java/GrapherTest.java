@@ -4,7 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull; 
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue; 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse; 
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
@@ -73,5 +74,28 @@ public class GrapherTest {
 	graph.add(new Grapher("Bob"));
 
 	assertTrue(graph.hasChildren()); 
+    }
+
+    @Test
+    @DisplayName("Should not add nodes that do not exist")
+    public void grapherChildNone(){
+	Grapher graph = new Grapher("Nick");
+
+	graph.add(null);
+
+	assertFalse(graph.hasChildren());
+    }
+
+    @Test
+    @DisplayName("Should remove a link to a known node")
+    public void grapherChildNodeRemove() {
+	Grapher graph = new Grapher("Nick");
+	graph.add(new Grapher("Sally"));
+
+	assertTrue(graph.hasChildren()); 
+	
+	graph.remove("Sally");
+
+	assertFalse(graph.hasChildren());
     }
 }

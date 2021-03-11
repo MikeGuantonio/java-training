@@ -27,6 +27,25 @@ public class Grapher {
     }
 
     public void add(Grapher node) {
-	this.children.add(node); 
+	if (null != node){
+	    this.children.add(node);
+	} 
     }
+
+    public void remove(String name) {
+	Grapher found = null;
+
+	// May have a performance hit.
+	// Each time I am looping I'm creating a new node
+	for(Grapher node : this.children) {
+	    if (name == node.getName()){
+		found = node;
+	    }
+	}
+
+	if(found != null){
+	    this.children.remove(found); 
+	}
+    }
+		
 }
