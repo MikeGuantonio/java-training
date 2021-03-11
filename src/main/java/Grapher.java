@@ -25,4 +25,8 @@ public class Grapher {
     public String getName() {
 	return this.name;
     }
+
+    public void add(Grapher node) {
+	this.children.add(node); 
+    }
 }

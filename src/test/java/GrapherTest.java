@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull; 
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue; 
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
@@ -62,5 +63,15 @@ public class GrapherTest {
     public void grapherNullName(){
 	Throwable ex = assertThrows(NullPointerException.class, () -> new Grapher(null));
 	assertEquals("name should not be empty", ex.getMessage()); 
+    }
+
+    @Test
+    @DisplayName("Should attach a node to my graph")
+    public void grapherChildAdd(){
+	Grapher graph = new Grapher("Nick");
+
+	graph.add(new Grapher("Bob"));
+
+	assertTrue(graph.hasChildren()); 
     }
 }
