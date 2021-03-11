@@ -55,9 +55,12 @@ public class GrapherTest {
 	assertEquals(graph.getName(), "Nick");
     }
 
+    // Keep in mind that this test tightly couples to the implementation and not
+    // the behavior. We need to review this
     @Test
     @DisplayName("Should not create a node with a null name")
     public void grapherNullName(){
-	// code
+	Throwable ex = assertThrows(NullPointerException.class, () -> new Grapher(null));
+	assertEquals("name should not be empty", ex.getMessage()); 
     }
 }
