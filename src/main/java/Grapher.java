@@ -35,11 +35,11 @@ public class Grapher {
     public void remove(String name) {
 	Grapher found = null;
 
-	// May have a performance hit.
-	// Each time I am looping I'm creating a new node
-	for(Grapher node : this.children) {
-	    if (name == node.getName()){
-		found = node;
+	int size = this.children.size(); 
+	for(int i = 0; i < size; i++){
+	    if (name == this.children.get(i).getName()){
+		found = this.children.get(i);
+		break;
 	    }
 	}
 
