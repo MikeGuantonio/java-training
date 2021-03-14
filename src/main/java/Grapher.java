@@ -2,7 +2,7 @@ package com.guantonio.javatrain;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Objects; 
+import java.util.Objects;  
 
 public class Grapher {
     private String name;
