@@ -14,14 +14,19 @@ public class GraphTrain {
 	this.initGraph(); 
     }
 
+    public void addVertex(Vertex node, int x, int y) {
+	this.edges[x][y] = node; 
+    }
+
     // Utility method to visualize graph
-    public void printGraph() {
+    public void print() {
 	for(int i = 0; i < this.edges.length; i++){
 	    for(int j = 0; j < this.edges[i].length; j++){
 		System.out.print(this.edges[i][j] + " "); 
 	    }
 	    System.out.println(""); 
 	}
+	System.out.println(""); 
     }
 
     // contains a list of children

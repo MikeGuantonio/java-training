@@ -24,7 +24,18 @@ public class GraphTrainTest {
     public void createGraph() {
 	GraphTrain graph = new GraphTrain(5);
 	
-	graph.printGraph();
+	graph.print();
+
+	assertNotNull(graph); 
+    }
+
+    @Test
+    @DisplayName("Should add a vertex to the matrix")
+    public void addVertex() {
+	GraphTrain graph = new GraphTrain(1);
+
+	graph.addVertex(new Vertex("bob"), 0, 0);
+	graph.print();
 
 	assertNotNull(graph); 
     }
