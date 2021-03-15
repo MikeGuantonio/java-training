@@ -14,7 +14,7 @@ public class GraphTrain {
 	this.initGraph(); 
     }
 
-    public void addVertex(Vertex node, int x, int y) {
+    public void addEdge(Vertex node, int x, int y) {
 	this.edges[x][y] = node; 
     }
 

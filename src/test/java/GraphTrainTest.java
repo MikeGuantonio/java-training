@@ -31,10 +31,10 @@ public class GraphTrainTest {
 
     @Test
     @DisplayName("Should add a vertex to the matrix")
-    public void addVertex() {
+    public void addEdge() {
 	GraphTrain graph = new GraphTrain(1);
 
-	graph.addVertex(new Vertex("bob"), 0, 0);
+	graph.addEdge(new Vertex("bob"), 0, 0);
 	graph.print();
 
 	assertNotNull(graph); 
