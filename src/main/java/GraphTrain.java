@@ -16,14 +16,14 @@ public class GraphTrain {
 
     public void addEdge(Vertex node, int x, int y) {
 	// Check for anything out of bound for x axis
-	if(x <  this.edges.length || x > this.edges.length){
+	if(x <  0 || x > this.edges.length){
 	    return;
 	}
 
 	// Check to see we are in range for the y axis.
 	// Since we are a squre for right now, a check on the first row
 	// should be fine
-	if(y < this.edges[0].length || y > this.edges[0].length){
+	if(y < 0 || y > this.edges[x].length){
 	    return; 
 	}
 	
