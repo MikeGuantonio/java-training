@@ -2,6 +2,7 @@ package com.guantonio.javatrain;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue; 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
@@ -89,5 +90,15 @@ public class GraphTrainTest {
         boolean hasEdge = graph.hasEdge(1, 1);
 
 	assertTrue(hasEdge);
+    }
+
+    @Test
+    @DisplayName("Should not find an edge in the graph")
+    public void doesNotHaveEdge() {
+	GraphTrain graph = new GraphTrain(2);
+
+	boolean hasEdge = graph.hasEdge(0,1);
+
+	assertFalse(hasEdge);
     }
 }
