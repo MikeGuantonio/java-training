@@ -41,6 +41,17 @@ public class GraphTrainTest {
     }
 
     @Test
+    @DisplayName("Should not be able to place a vertex in a non-present area of the graph")
+    public void addNonPresentEdge() {
+	GraphTrain graph = new GraphTrain(2);
+
+	graph.addEdge(new Vertex("Sally"), 5, 5);
+	graph.print();
+
+	assertNotNull(graph); 
+    }
+
+    @Test
     @DisplayName("Should remove a vertex from the matrix")
     public void removeEdge() {
 	GraphTrain graph = new GraphTrain(3);
