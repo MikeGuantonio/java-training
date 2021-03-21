@@ -64,4 +64,18 @@ public class GraphTrainTest {
 
 	assertNotNull(graph); 
     }
+
+    @Test
+    @DisplayName("Should not be able to remove a vertex from nowhere")
+    public void removeNotPresent() {
+	GraphTrain graph = new GraphTrain(2);
+
+	graph.addEdge(new Vertex("Devon"), 1, 1);
+	graph.print();
+
+	graph.removeEdge(6, 6);
+	graph.print();
+
+	assertNotNull(graph); 
+    }
 }
