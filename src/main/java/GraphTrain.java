@@ -31,6 +31,10 @@ public class GraphTrain {
     }
 
     public boolean hasEdge(int x, int y) {
+	if(!this.inBounds(x, y)) {
+	    return false;
+	}
+	
 	Vertex node = this.edges[x][y];
 
 	return !node.equals(Vertex.EmptyNode()); 

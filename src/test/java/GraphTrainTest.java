@@ -101,4 +101,14 @@ public class GraphTrainTest {
 
 	assertFalse(hasEdge);
     }
+
+    @Test
+    @DisplayName("Should not find an edge out of bounds of graph")
+    public void nonPresentEdge() {
+	GraphTrain graph = new GraphTrain(3);
+
+	boolean hasEdge = graph.hasEdge(7, 7);
+
+	assertFalse(hasEdge); 
+    }
 }
