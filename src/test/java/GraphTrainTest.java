@@ -1,6 +1,7 @@
 package com.guantonio.javatrain;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue; 
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
@@ -77,5 +78,16 @@ public class GraphTrainTest {
 	graph.print();
 
 	assertNotNull(graph); 
+    }
+
+    @Test
+    @DisplayName("Should return that an edge is present")
+    public void hasEdge() {
+	GraphTrain graph = new GraphTrain(2);
+
+	graph.addEdge(new Vertex("Sam"), 1, 1);
+        boolean hasEdge = graph.hasEdge(1, 1);
+
+	assertTrue(hasEdge);
     }
 }

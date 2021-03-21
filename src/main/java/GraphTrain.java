@@ -30,6 +30,12 @@ public class GraphTrain {
 	this.edges[x][y] = Vertex.EmptyNode(); 
     }
 
+    public boolean hasEdge(int x, int y) {
+	Vertex node = this.edges[x][y];
+
+	return !node.equals(Vertex.EmptyNode()); 
+    }
+
     // Utility method to visualize graph
     public void print() {
 	for(int i = 0; i < this.edges.length; i++){

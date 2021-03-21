@@ -18,4 +18,19 @@ public class Vertex {
     public String toString() {
 	return this.name;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+	if(obj == this){
+	    return true;
+	}
+
+	if(!(obj instanceof Vertex)){
+	    return false;
+	}
+
+	Vertex other = (Vertex)obj;
+
+	return this.name == other.name; 
+    }
 }
