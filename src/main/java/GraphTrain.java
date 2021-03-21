@@ -18,6 +18,10 @@ public class GraphTrain {
 	this.edges[x][y] = node; 
     }
 
+    public void removeEdge(int x, int y) {
+	this.edges[x][y] = Vertex.EmptyNode(); 
+    }
+
     // Utility method to visualize graph
     public void print() {
 	for(int i = 0; i < this.edges.length; i++){
@@ -33,7 +37,7 @@ public class GraphTrain {
     public void initGraph() {
 	for(int i = 0; i < this.edges.length; i++){
 	    for(int j = 0; j < this.edges[i].length; j++){
-		this.edges[i][j] = new Vertex(); 
+		this.edges[i][j] = Vertex.EmptyNode(); 
 	    }
 	}
     }

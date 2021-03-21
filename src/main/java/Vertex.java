@@ -7,6 +7,10 @@ public class Vertex {
 	this.name = "None";
     }
 
+    public static Vertex EmptyNode() {
+	return new Vertex();
+    }
+
     public Vertex(String name) {
 	this.name = name;
     }

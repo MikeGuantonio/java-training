@@ -39,4 +39,18 @@ public class GraphTrainTest {
 
 	assertNotNull(graph); 
     }
+
+    @Test
+    @DisplayName("Should remove a vertex from the matrix")
+    public void removeEdge() {
+	GraphTrain graph = new GraphTrain(3);
+
+	graph.addEdge(new Vertex("Nick"), 0, 2);
+	graph.print();
+	
+	graph.removeEdge(0, 2);
+	graph.print(); 
+
+	assertNotNull(graph); 
+    }
 }
