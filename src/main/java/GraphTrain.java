@@ -51,14 +51,14 @@ public class GraphTrain {
     }
 
     private boolean inBounds(int x, int y) {
-	if(x <  0 || x > this.edges.length){
+	if(x <  0 || x > this.edges.length -1){
 	    return false;
 	}
 
 	// Check to see we are in range for the y axis.
 	// Since we are a squre for right now, a check on the first row
 	// should be fine
-	if(y < 0 || y > this.edges[x].length){
+	if(y < 0 || y > this.edges[x].length -1){
 	    return false; 
 	}
 

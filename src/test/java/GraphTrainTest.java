@@ -70,7 +70,7 @@ public class GraphTrainTest {
     public void removeNotPresent() {
 	GraphTrain graph = new GraphTrain(2);
 
-	graph.addEdge(new Vertex("Devon"), 1, 1);
+	graph.addEdge(new Vertex("Devon"), 1, 2);
 	graph.print();
 
 	graph.removeEdge(6, 6);
