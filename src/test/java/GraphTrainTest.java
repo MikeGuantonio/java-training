@@ -111,4 +111,6 @@ public class GraphTrainTest {
 
 	assertFalse(hasEdge); 
     }
+
+    // Refactor the methods to check for hasEdge instead of print
 }
